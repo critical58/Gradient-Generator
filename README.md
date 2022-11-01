@@ -6,7 +6,7 @@ A [p5.js](https://p5js.org/) project that creates linear gradients by setting in
 
 - Linear gradient generation.
 - Multiple colours.
-- **To-Do: ** Add support for cyclical gradients.
+- **To-Do:** Add support for cyclical gradients.
 
 
 ## Demo 🗂
