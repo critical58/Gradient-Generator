@@ -26,8 +26,22 @@ There are multiple types of gradient. Some examples are:
 - Non-linear gradients.
 - Radial gradients.
 - Conic gradients.
-- Elliptic gradients.
 - Three-dimensional gradients.
 
 ## Two-Step Gradients 
-Simply put, two-step gradients are the most rudimentary form of a colour gradient. They are a form of linear gradient that transforms one colour into another in a linear fashion
+Simply put, two-step gradients are the most rudimentary form of a colour gradient. They are a form of linear gradient that transforms one specific colour into another in a linear fashion using a mathematical transformation technique known as linear interpolation.
+
+## Linear Gradients 
+A linear gradient is any gradient that uses the transformation method which is linear interpolation to calculate the colour that should be assigned to a certain pixel. Some other colour interpolation methods include hue interpolation, luminosity interpolation and quadratic interpolation.
+
+## Non-Linear Gradients
+A non-linear gradient is a gradient that does not interpolate the colours in a linear fashion. For example, if a gradient was generated using cubic or bi-cubic interpolation it would change the positions of the colour and not the colour itself.
+
+## Radial Gradients
+Radial gradients are similar to linear gradients in the sense that they progess through colours in a linear fashion however, radial gradients are mapped to polar coordinates instead of linear coordinates. This creates a gradient that originates from the centre and expands outwards.
+
+## Conic Gradients
+A conic gradient is similar to a radial gradient in the sense that you have to iterate over theta instead and there's a little bit of cleanup necessary to normalise it. When you take the Math.atan2, you get a value between -π an π radians which you can then use to sweep around the centre and clash at a pre-determined point.
+
+## Three-Dimensional Gradients
+Similar to a two-step gradient, a 3D gradient is one that linearly cycles through the colours but instead of being represented in a 2D plane, the gradient is rendered in 3 dimensions.
