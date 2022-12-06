@@ -4,7 +4,7 @@ function normaliseColours(colours) {
   let normalised = [...Array(steps)].map(() => Array(3).fill(""));
   for(let i = 0; i < steps; ++i) {
     for(let j = 0; j < 3; ++j) {
-      normalised[i][j] = colours[i][j] / 255
+      normalised[i][j] = colours[i][j] / 255;
     }
   }
   return normalised;
