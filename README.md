@@ -51,11 +51,11 @@ The first line initialises the variables we will be using in the program in the 
 
 ![Code Segment 1](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gOzO7zWe1-SJOV98lMv63-loc7xp8EaOVxnNvh4PeYFuBJ72AGM6-GmslXDO8hnF8cPyNfESLcRvGy8PaxnyTt0MtkiPw=w450)
 
-A function is then declared to take an input of a 2-dimensional array containing the each colour value. A seperate and empty 2D array is then created to contain the new, normalised values. This is done by using an ellipses from the JS rest syntax and mapping each element to an empty string. Then we use nested iteration to loop through each element of the non-normalised array and assign the normalised element to the new array. We then return the new, normalised array.
+A function is then declared to take an input of a 2-dimensional array containing each colour value. A seperate and empty 2D array is then created to contain the new, normalised values. This is done by using an ellipses from the JS rest syntax and mapping each element to an empty string. Then we use nested iteration to loop through each element of the non-normalised array, calculate and then assign the normalised element to the new array. We then return the new, normalised, 2D array.
 
 ![Code Segment 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gNtCXoL8wN3qFqls5YVNdfjY8k43TeSwqNRNF1tYUCqBM_qzipkLvcA5VOPnOBY-woQMxBzaMkhWesBHDAXCzvwhYV3Zw=w450)
 
-Another function is then created that given two colours and a value, will find you the linear-ly interpolated colour value. What's happening is you find the distance between the points in terms of each component; red, green and blue. Along the red axis the difference is 1, and you just multiply by how far along we are plus the starting value. Blue is the reverse, it's the same length but you're moving in the reverse direction and you start at 0 instead of 1. The sign is important to know if you're increasing or decreasing. Green is 0 at both points so it never changes. If this was a less simple color we might have length shorter than 1 for the component but you're still just finding the fraction of the length that the current point represents.
+Another function is then created that given two colours and a value, will find you the linear-ly interpolated colour value. Interpolation is a technique that allows you to “fill a gap” between two numbers. The rudimentary forumula for linear interpolation is $\c=a+(b-a)*t$.
 
 ![Code Segment 3](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gOVp-kO48fQLlbTFWxTxwfVLwGYYvEHXW-vn83VNjcwedLnAgPnuxBd97s6K6QaYlsumwYwqxqcyhWuYw-_OPKJnnu6sw=w450)
 
