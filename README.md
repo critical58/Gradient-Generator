@@ -34,7 +34,7 @@ Simply put, two-step gradients are the most rudimentary form of a colour gradien
 ### Linear Gradients 
 A linear gradient is any gradient that uses the transformation method which is linear interpolation to calculate the colour that should be assigned to a certain pixel. Some other colour interpolation methods include hue interpolation, luminosity interpolation and quadratic interpolation.
 
-## Non-Linear Gradients
+### Non-Linear Gradients
 A non-linear gradient is a gradient that does not interpolate the colours in a linear fashion. For example, if a gradient was generated using cubic or bi-cubic interpolation it would change the positions of the colour and not the colour itself.
 
 ### Radial Gradients
@@ -56,5 +56,5 @@ A function is then declared to take an input of a 2-dimensional array containing
 Another function is then created that given two colours and a value, will find you the linear-ly interpolated colour value. What's happening is you find the distance between the points in terms of each component; red, green and blue. Along the red axis the difference is 1, and you just multiply by how far along we are plus the starting value. Blue is the reverse, it's the same length but you're moving in the reverse direction and you start at 0 instead of 1. The sign is important to know if you're increasing or decreasing. Green is 0 at both points so it never changes. If this was a less simple color we might have length shorter than 1 for the component but you're still just finding the fraction of the length that the current point represents.
 ![Code Segment 3](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gOVp-kO48fQLlbTFWxTxwfVLwGYYvEHXW-vn83VNjcwedLnAgPnuxBd97s6K6QaYlsumwYwqxqcyhWuYw-_OPKJnnu6sw=w450)
 
-This is the setup function. When this is run and p5.js is installed, this is the function that will run first when the project is executed. In this case, the setup function will do all of the user input necessary to create the gradient. This will include the amount of colours, the RGB values of the colours themselves and the canvas height and width. I have chosen not to implement input validation as this is a showcase rather than a program for production and distribution.
-![Code Segment 4](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gMGZwXqyZj__QscPZjwSZ7CsDx_zNddvm7YUG7zKUw4RdAhqHGNl4HaiJ3QCVlQu7lonfIKAN-zP9y1Yp_-oYBwLr3A-A=w1366-h665)
+This is the setup function. When this is run and p5.js is installed, this is the function that will run first when the project is executed. In this case, the setup function will do all of the user input necessary to create the gradient. This will include the amount of colours, the RGB values of the colours themselves and the canvas height and width. It also takes into account if only 1 colour has been selected so it can just show a single colour. I have chosen not to implement input validation as this is a showcase rather than a program for production and distribution. At the end of the function, the canvas is created.
+![Code Segment 4](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gMGZwXqyZj__QscPZjwSZ7CsDx_zNddvm7YUG7zKUw4RdAhqHGNl4HaiJ3QCVlQu7lonfIKAN-zP9y1Yp_-oYBwLr3A-A=w450)
