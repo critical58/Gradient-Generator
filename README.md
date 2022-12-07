@@ -55,7 +55,7 @@ A function is then declared to take an input of a 2-dimensional array containing
 
 ![Code Segment 2](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gNtCXoL8wN3qFqls5YVNdfjY8k43TeSwqNRNF1tYUCqBM_qzipkLvcA5VOPnOBY-woQMxBzaMkhWesBHDAXCzvwhYV3Zw=w450)
 
-Another function is then created that given two colours and a value, will find you the linear-ly interpolated colour value. Interpolation is a technique that allows you to “fill a gap” between two numbers. The rudimentary forumula for linear interpolation is $c=a+(b-a)\*t$ where $a$ and $b$ are the two numbers and t is a value between 1 and 0 that determines where, between the two numbers the derived number will be. This is then done on all 3 colour channels; red, green and blue. This will result in the returned value being a colour that is $t$ between the two colours.
+Another function is then created that given two colours and a value, will find you the linear-ly interpolated colour value. Interpolation is a technique that allows you to “fill a gap” between two numbers. The rudimentary forumula for linear interpolation is $c=a+(b-a)\*t$ where $a$ and $b$ are the two numbers and t is a value between 1 and 0 that determines where, between the two numbers the derived number, or $c$, will be. This is then done on all 3 colour channels; red, green and blue. This will result in the returned value being a colour that is $t$ between the two colours.
 
 ![Code Segment 3](https://lh3.googleusercontent.com/u/0/drive-viewer/AFDK6gOVp-kO48fQLlbTFWxTxwfVLwGYYvEHXW-vn83VNjcwedLnAgPnuxBd97s6K6QaYlsumwYwqxqcyhWuYw-_OPKJnnu6sw=w450)
 
