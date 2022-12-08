@@ -54,10 +54,10 @@ function setup() {
 function draw() {
   let stepIndex, fraction;
   for(let i = 0; i < width; ++i) {
+    stepIndex = floor(i / (width/(steps - 1)));
+    fraction = (i % (width/(steps - 1))) / (width/(steps - 1));
+    c = lerpC(colours[stepIndex], colours[stepIndex+1], fraction);
     for(let j = 0; j < height; ++j) {
-      stepIndex = floor(i / (width/(steps - 1)));
-      fraction = (i % (width/(steps - 1))) / (width/(steps - 1));
-      c = lerpC(colours[stepIndex], colours[stepIndex+1], fraction);
       set(i, j, color(c[0]*255, c[1]*255, c[2]*255));
     }
   }
